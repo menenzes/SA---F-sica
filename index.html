@@ -4,51 +4,50 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/style.css">
-    <title>SA - Física</title>
-    <script                                                                             
-    type="text/javascript" 
-    src="js/conversor.js">
-    </script>                       
+    <meta charset="utf-8" />
+    <title> Conversões </title>
+<script 	type="text/javascript"
+	src="js/conversor.js">
+</script>
+<style> </style>
 </head>
+
 <body>
-    <!-- Acima estão as configurações iniciais do código -->
+    <h1>Conversor danette</h1>
+<form 	style="border: 1px double black; background-color: white;
+	padding: 4px;text-align:center;"
+	name="convert">
 
-
-
-    <form style="border: 5px double black; background-color: aqua; padding: 500px; text-align: center;"
-    name="converter">   <!-- Configs da estética do conversor -->
-
-Temperatura em fahrenheit: 
+Temperatura em Fahrenheit: 
 <input 	type="text" 
-		name="ftemp"                
-		size="4"
-onchange="convertTemp('ftoc')"> <!-- Call do Conversor de Fahrenheit -->
+		name="ftemp" 
+		size="7"
 
+onchange="convertTemp('ftoc')"> 
 Temperatura em Celsius:
 
 <input 	type="text" 
-	name="ctemp" 	
-	size="4"
-onchange="convertTemp('ctof')">     <!-- Call do Conversor de celsius -->
+	name="ctemp" 
+	size="7"
+
+onchange="convertTemp('ctof')">
 
 Temperatura em Kelvin:
 
 <input 	type="text" 
 	name="ktemp" 
-	size="4"
-onchange="convertTemp('ktof')">         <!-- Call do Conversor de Kelvin -->
+	size="7"
+
+onchange="convertTemp('ktof')">
 
 <br /><br />
 <input 	type="button" 
-	value="limpar"       
-	onclick="clearAll();"> <!-- Call da função LIMPAR -->
+	value="limpar" 
+	onclick="clearAll();">
 </form>
 </body>
-</html> 
+</html>
+
 
 
 3301 PGP Cryptography ended by Kleopatra® in 04/09/2019 05:56:11 IPV4: 192.168.0.33 

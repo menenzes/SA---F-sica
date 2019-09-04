@@ -1,23 +1,23 @@
-alert("Conversor de temperaturas")
-alert("Digite qualquer temperatura em qualquer campo que a conversão será feita automaticamente")
 function convertTemp(direction)
 {
+ //instanciando objetos
 var fObj = document.convert.ftemp, cObj = document.convert.ctemp, kObj = document.convert.ktemp;
 
+//definindo direções para conversões
 if (direction == "ftoc") 
 {
     cObj.value = Math.round((fObj.value - 32) * (5/9));
-	kObj.value = Math.round((parseInt(cObj.value) + 459.67) * (5/9)); /* Função que converte Fahrenheit */
+	kObj.value = Math.round((parseInt(cObj.value) + 459.67) * (5/9));
 } 
 else if (direction == "ktof") 
  {
-	fObj.value = Math.round((parseInt(cObj.value) * (9/5)) -  459.67);     /* Função que converte Kelvin */
+	fObj.value = Math.round((parseInt(cObj.value) * (9/5)) -  459.67);
 	cObj.value = Math.round((fObj.value - 32) * (5/9));
 	
  }
 else
  {
-	fObj.value = Math.round((parseInt(cObj.value) * (9/5)) + 32); /* Função que converte Celsius */
+	fObj.value = Math.round((parseInt(cObj.value) * (9/5)) + 32);
 	kObj.value = Math.round((parseInt(cObj.value) + 273));
  }
 }
@@ -25,6 +25,6 @@ else
 function clearAll()
 {
 document.convert.ftemp.value="";
-document.convert.ctemp.value="";        /* Função "limpar" */
+document.convert.ctemp.value="";
 document.convert.ktemp.value="";
-}   
+}
