@@ -1,30 +1,46 @@
+
+alert("Conversor de temperaturas SA - Física")
+
+
 function convertTemp(direction)
 {
- //instanciando objetos
-var fObj = document.convert.ftemp, cObj = document.convert.ctemp, kObj = document.convert.ktemp;
 
-//definindo direções para conversões
-if (direction == "ftoc") 
-{
-    cObj.value = Math.round((fObj.value - 32) * (5/9));
-	kObj.value = Math.round((parseInt(cObj.value) + 459.67) * (5/9));
+var fahrenheitvalue = document.convert.temperaturaFahrenheit, 
+celsiusvalue = document.convert.temperaturaCelsius, 
+kelvinvalue = document.convert.temperaturaKelvin;
+
+
+if (direction == "fahrenheitConversion") 
+{celsiusvalue.value = Math.round((fahrenheitvalue.value - 32) * (5/9));
+kelvinvalue.value = Math.round((parseInt(celsiusvalue.value) + 459.67) * (5/9)); //Conversor Fahrenheit
 } 
-else if (direction == "ktof") 
- {
-	fObj.value = Math.round((parseInt(cObj.value) * (9/5)) -  459.67);
-	cObj.value = Math.round((fObj.value - 32) * (5/9));
-	
- }
-else
- {
-	fObj.value = Math.round((parseInt(cObj.value) * (9/5)) + 32);
-	kObj.value = Math.round((parseInt(cObj.value) + 273));
- }
+
+else if (direction == "kelvinConversion"){
+	fahrenheitvalue.value = Math.round((parseInt(celsiusvalue.value) * (9/5)) -  459.67);
+	celsiusvalue.value = Math.round((fahrenheitvalue.value - 32) * (5/9)); //Conversor kelvin
+
 }
 
-function clearAll()
+
+else{
+	fahrenheitvalue.value = Math.round((parseInt(celsiusvalue.value) * (9/5)) + 32);
+	kelvinvalue.value = Math.round((parseInt(celsiusvalue.value) + 273)); //Conversor de celsius
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+function LIMPATUDO()
 {
-document.convert.ftemp.value="";
-document.convert.ctemp.value="";
-document.convert.ktemp.value="";
+document.convert.temperaturaFahrenheit.value="";
+document.convert.temperaturaCelsius.value="";				//FUNÇÃO LIMPA ESSA CARALHA
+document.convert.temperaturaKelvin.value="";
 }

@@ -6,44 +6,34 @@
 <head>
     <meta charset="utf-8" />
     <title> Conversões </title>
-<script 	type="text/javascript"
-	src="js/conversor.js">
-</script>
-<style> </style>
+    <script 	type="text/javascript"  src="js/conversor.js"></script>
+    <style> </style>
 </head>
 
 <body>
     <h1>Conversor danette</h1>
-<form 	style="border: 1px double black; background-color: white;
-	padding: 4px;text-align:center;"
-	name="convert">
+<form 	style="border: 2px double black; 
+background-color: white;
+padding: 130px;       
+text-align:center;"
+name="convert">
 
 Temperatura em Fahrenheit: 
-<input 	type="text" 
-		name="ftemp" 
-		size="7"
+<input 	type="text" name="temperaturaFahrenheit" size="7"
+onchange="convertTemp('fahrenheitConversion')"> 
 
-onchange="convertTemp('ftoc')"> 
 Temperatura em Celsius:
-
-<input 	type="text" 
-	name="ctemp" 
-	size="7"
-
-onchange="convertTemp('ctof')">
+<input 	type="text" name="temperaturaCelsius" size="7"
+onchange="convertTemp('CelsiusConversion')">
 
 Temperatura em Kelvin:
-
-<input 	type="text" 
-	name="ktemp" 
-	size="7"
-
-onchange="convertTemp('ktof')">
+<input 	type="text" name="temperaturaKelvin" size="7"
+onchange="convertTemp('kelvinConversion')">
 
 <br /><br />
 <input 	type="button" 
-	value="limpar" 
-	onclick="clearAll();">
+	value="Dale mesmo" 
+	onclick="LIMPATUDO();">
 </form>
 </body>
 </html>
