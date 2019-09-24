@@ -27,7 +27,8 @@ onchange="convertTemp('CelsiusConversion')">
 
 Temperatura em Kelvin:
 <input 	type="text" name="temperaturaKelvin" size="7"
-onchange="convertTemp('kelvinConversion')">
+onchange="convertTemp('kelvinConversion')"
+onkeypress='return somentenumerokelvin(event)'>
 
 <br /><br />
 <input 	type="button" 

@@ -29,9 +29,30 @@ else{
 }
 
 
+function somentenumerokelvin(e){
+	var tecla = (window.event) ? event.keyCode : e.which;
+	if (tecla == 45) {
+		$(function (){
+			$("div.erro").slideDown(300).delay(1600).slideup(400);
+	});
+	return false;
+	} else {
+		if((tecla == 46 || tecla > 47 && tecla < 58)) return true;
+		else{
+			if(tecla == 8 || tecla == 0) return true;
+			else return false;
+		}
+	}
+}
 
-
-
+function somentenumero(e){
+	var tecla = (window.event) ? event.keyCode : e.which;
+	if((tecla == 46 || tecla == 45 || tecla > 47 && tecla < 58)) return true;
+	else{
+		if(tecla==8 || tecla == 0) return true;
+		else return false;
+	}
+}
 
 
 
