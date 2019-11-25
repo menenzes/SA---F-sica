@@ -1,4 +1,4 @@
-
+''
 alert("Conversor de temperaturas SA - Física")
 
 
